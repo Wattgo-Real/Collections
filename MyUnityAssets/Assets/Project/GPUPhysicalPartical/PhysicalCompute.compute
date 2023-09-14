@@ -1,0 +1,315 @@
+#pragma kernel CSMain
+#include "ComputeStruct.cginc"
+
+struct GridData
+{
+    int CollisionGridDataNOW;
+    int ParticalGridDataNOW;
+    int toParticalGridData;
+};
+
+struct CollisionGridData
+{
+    int js;
+    int CollisionGrid;
+};
+
+struct NormalMixData
+{
+    float4 normal;
+    float value;
+};
+
+struct PointData
+{
+    float4 points;
+    int pointLength;
+    int jsLength;
+};
+
+struct PointNormalMixData
+{
+    float4 normal;
+    float4 points;
+};
+
+struct ParticalGridData
+{
+    int ParticalGrid;
+    int inGrid;
+    int gs;
+};
+
+struct TooManyThingInThere
+{
+    float4x4 x1;
+    float4x4 x2;
+    float4x4 x3;
+    float4x4 x4;
+};
+
+RWStructuredBuffer<CellData> _Properties;
+RWStructuredBuffer<GridData> _Grid;
+RWStructuredBuffer<CollisionGridData> _CollisionGrid;
+RWStructuredBuffer<NormalMixData> _NormalMix;
+
+RWStructuredBuffer<ParticalGridData> _objGrid;
+RWStructuredBuffer<PointData> _point;
+RWStructuredBuffer<TooManyThingInThere> _too;
+RWStructuredBuffer<PointNormalMixData> _pointNormalMix;
+float updataTime;
+float gravity;
+float4 halfBound;
+float4 boundTot;
+float CH;
+float4 centerBound;
+int delateCount;
+int population;
+
+/*
+void InGridToo(uint id,int grid)
+{
+    uint o = (uint)((id%64)/16);
+    uint p = (uint)(id%16);
+    if (o == 0)
+        _too[(uint)(id/64)].x1[(uint)((float)p/4)][(uint)(id%p)] = grid;
+
+    if (o == 1)
+        _too[(uint)(id/64)].x2[(uint)((float)p/4)][(uint)(id%p)] = grid;
+
+    if (o == 2)
+        _too[(uint)(id/64)].x3[(uint)((float)p/4)][(uint)(id%p)] = grid;
+
+    if (o == 3)
+        _too[(uint)(id/64)].x4[(uint)((float)p/4)][(uint)(id%p)] = grid;
+}
+*/
+
+int Grid(float3 pos)
+{
+    return (int)(pos.y + halfBound.y) * boundTot.y + 
+           (int)(pos.x + halfBound.x) * boundTot.z + 
+           (int)(pos.z + halfBound.z);
+}
+
+[numthreads(64,1,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+    if (CH == 0)
+    {
+        float4x4 mat = _Properties[id.x].mat;
+        float3 Lspeed = _Properties[id.x].speed;
+        float Acceleration = gravity * updataTime;
+
+        //找出動態碰撞體的內容
+/*
+        int centerGridPos = Grid(float3(mat[0][3],mat[1][3],mat[2][3]));
+        
+        if(mat[2][3]-(int)mat[2][3] > 0.5)
+            centerGridPos += 1;
+
+        if(mat[0][3]-(int)mat[0][3] > 0.5)
+            centerGridPos += boundTot.z;
+
+        if(mat[1][3]-(int)mat[1][3] > 0.5)
+            centerGridPos += boundTot.y;
+
+        int tGrid[8] = {
+            centerGridPos,
+            centerGridPos - 1,
+            centerGridPos - (int)boundTot.z,
+            centerGridPos - (int)boundTot.z - 1,
+            centerGridPos + boundTot.y,
+            centerGridPos - 1 + boundTot.y,
+            centerGridPos - (int)boundTot.z + (int)boundTot.y,
+            centerGridPos - (int)boundTot.z - 1 + (int)boundTot.y};
+        
+        float dis = _Properties[id.x].mixDis;
+        for (int i=0;i<8;i++)
+        {
+            int GDP = _Grid[tGrid[i]+1].ParticalGridDataNOW - _Grid[tGrid[i]].ParticalGridDataNOW;
+            for (int j=0;j<GDP;j++)
+            {
+                int colliderDis = _Properties[_objGrid[GDP].ParticalGrid].mixDis;
+                {
+                    //Lspeed = float3(0,0,0);
+                }
+            }
+        }
+*/
+
+        //計算靜態碰撞體是否有被碰撞
+        for (int k=0;k<_point[0].pointLength;k++)
+        {
+            bool isC = true;
+            float4 poik = mul(mat, _point[k].points);
+            int gridPos = Grid(float3(poik.x,poik.y,poik.z));
+
+
+            float smallestA = -10;
+            float3 tNormal = float3(0,0,0);
+            if (poik.x < halfBound.x+centerBound.x && poik.x > -halfBound.x+centerBound.x &&
+                poik.y < halfBound.y+centerBound.y && poik.y > -halfBound.y+centerBound.y &&
+                poik.z < halfBound.z+centerBound.z && poik.z > -halfBound.z+centerBound.z)
+            {
+                int Grid = _Grid[gridPos].CollisionGridDataNOW;
+                int CPos = _Grid[gridPos+1].CollisionGridDataNOW -Grid;
+
+                int p = _CollisionGrid[Grid].js;
+                int q = 0;
+                float a = 0;
+                for (int j=0 ;j < CPos ;j++)
+                { 
+                    if(_CollisionGrid[Grid+j].js != p)
+                    {
+                        smallestA = -10;
+                        tNormal = float3(0,0,0);
+                        isC = true;
+                        p = _CollisionGrid[Grid+j].js;
+                    }
+
+                    q = _point[p].jsLength + _CollisionGrid[Grid+j].CollisionGrid;
+                    NormalMixData normalD = _NormalMix[q];
+                    a = dot(poik.xyz , normalD.normal.xyz) - normalD.value;
+                    if (a > 0)
+                        isC = false;
+    
+                    if(smallestA < a && a < 0)
+                    {
+                        smallestA = a;
+                        tNormal = normalD.normal.xyz;
+                    }
+
+                    if(isC == true && (_CollisionGrid[Grid+j+1].js != p || CPos-1 == j))
+                    {
+                        mat[0][3] -= tNormal.x*smallestA;
+                        mat[1][3] -= tNormal.y*smallestA;
+                        mat[2][3] -= tNormal.z*smallestA;
+                        break;
+                    }
+                }
+            }else
+            {
+                bool isC = false;
+            }
+
+            //計算動態碰撞體
+
+            if(isC == true && smallestA != -10)
+            {
+                Lspeed = (tNormal * 2 *dot(-Lspeed,tNormal) + Lspeed) * 0.95;
+                break;
+            }
+        }
+
+        Lspeed += float3(0,Acceleration,0);
+        float3 Displacement = Lspeed * updataTime;
+        mat[0][3] += Displacement.x;
+        mat[1][3] += Displacement.y;
+        mat[2][3] += Displacement.z;
+        //mat[1][3] = _objGrid[id.x].ParticalGrid/10;
+
+        float3 pos = float3(mat[0][3],mat[1][3],mat[2][3]);
+        if (delateCount = 1 && pos.x < halfBound.x+centerBound.x && pos.x > -halfBound.x+centerBound.x &&
+                               pos.y < halfBound.y+centerBound.y && pos.y > -halfBound.y+centerBound.y &&
+                               pos.z < halfBound.z+centerBound.z && pos.z > -halfBound.z+centerBound.z)
+        {
+            _Properties[id.x].grid = Grid(pos);
+        }else if(delateCount = 1)
+        {
+            _Properties[id.x].grid = -1;
+        }
+
+        _Properties[id.x].mat = mat;
+        _Properties[id.x].speed = Lspeed;
+
+    }
+
+    /*
+    else if(CH == 1)
+    {
+        int pTo[65535];
+        for (int i =0;i < boundTot.x;i++)
+        {
+            pTo[i] = 0;
+        }
+
+        uint p = (uint)(population)/64 + 1 ;
+        for (int j = 0 ; j < (int)p ; j++)
+        {
+            TooManyThingInThere too = _too[j];
+            for (int s = 0 ; s < 4;s++)
+            {
+                for (int k = 0 ; k < 4;k++)
+                {
+                    if(too.x1[k][s] != -1)
+                    {
+                        pTo[too.x1[k][s]] += 1;
+                        too.x1[k][s] = pTo[too.x1[k][s]];
+                    }
+                }
+                for (int l = 0 ; l < 4;l++)
+                {
+                    if(too.x2[l][s] != -1)
+                    {
+                        pTo[too.x2[l][s]] += 1;
+                        too.x2[l][s] = pTo[too.x2[l][s]];
+                    }
+                }
+                for (int m = 0 ; m < 4;m++)
+                {
+                    if(too.x3[m][s] != -1)
+                    {
+                        pTo[too.x3[m][s]] += 1;
+                        too.x3[m][s] = pTo[too.x3[m][s]];
+                    }
+
+                }
+                for (int n = 0 ; n < 4;n++)
+                {
+                    if(too.x4[m][s] != -1)
+                    {
+                        pTo[too.x4[n][s]] += 1;
+                        too.x4[n][s] = pTo[too.x4[n][s]];
+                    }
+                }
+            }
+        }
+
+        for (int i = 0 ; i < boundTot.x ; i++)
+        {
+            _Grid[i+1].ParticalGridDataNOW = _Grid[i].ParticalGridDataNOW + pTo[i];
+        }
+
+
+    }else if(CH == 2)
+    {
+        uint o = (uint)((id.x%64)/16);
+        uint p = (uint)(id.x%16);
+        uint r = (uint)(p/4);
+        uint q = (uint)(id.x%p);
+
+        ParticalGridData PGD = _objGrid[id.x];
+        if (o == 0)
+        {
+            _objGrid[_Grid[PGD.inGrid].ParticalGridDataNOW + _too[(uint)(id.x/64)].x1[r][q] - 1].ParticalGrid = id.x;
+            _too[(uint)(id.x/64)].x1[r][q] = 0;
+        }
+        if (o == 1)
+        {
+            _objGrid[_Grid[PGD.inGrid].ParticalGridDataNOW + _too[(uint)(id.x/64)].x2[r][q] - 1].ParticalGrid = id.x;
+            _too[(uint)(id.x/64)].x2[r][q] = 0;
+        }
+        if (o == 2)
+        {
+            _objGrid[_Grid[PGD.inGrid].ParticalGridDataNOW + _too[(uint)(id.x/64)].x3[r][q] - 1].ParticalGrid = id.x;
+            _too[(uint)(id.x/64)].x3[r][q] = 0;
+        }
+        if (o == 3)
+        {
+            _objGrid[_Grid[PGD.inGrid].ParticalGridDataNOW + _too[(uint)(id.x/64)].x4[r][q] - 1].ParticalGrid = id.x;
+            _too[(uint)(id.x/64)].x4[r][q] = 0;
+        }
+    }
+    */
+}

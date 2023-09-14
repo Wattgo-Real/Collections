@@ -1,0 +1,75 @@
+﻿  ORB.cpp
+C:\Library\opencv\build\include\opencv2\core.hpp(1746,1): warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
+C:\Library\opencv\build\include\opencv2\core.hpp(1746,1): warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
+C:\Library\opencv\build\include\opencv2\core.hpp(1746,1): warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
+C:\Library\opencv\build\include\opencv2\calib3d.hpp(1,1): warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(323,35): warning C4305: '正在初始化': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(442,21): warning C4244: '正在初始化': 將 'float' 轉換為 'int'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(443,14): warning C4244: '正在初始化': 將 'float' 轉換為 'int'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(445,24): warning C4244: '=': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(482,31): warning C4305: '正在初始化': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(483,36): warning C4305: '正在初始化': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(511,37): warning C4244: '=': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(512,37): warning C4244: '=': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(517,41): warning C4244: '=': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(518,41): warning C4244: '=': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(519,37): warning C4244: '=': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(524,41): warning C4244: '=': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(525,41): warning C4244: '=': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(527,44): warning C4244: '=': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(528,44): warning C4244: '=': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(529,41): warning C4244: '=': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(544,30): warning C4244: '+=': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(549,30): warning C4244: '+=': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(573,36): warning C4244: '=': 將 'int64' 轉換為 'double'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(599,36): warning C4244: '=': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(600,36): warning C4244: '=': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(601,33): warning C4244: '=': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(602,36): warning C4244: '=': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(603,36): warning C4244: '=': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(604,33): warning C4244: '=': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(605,33): warning C4244: '=': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(606,33): warning C4244: '=': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(708,20): warning C4244: '正在初始化': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(709,20): warning C4244: '正在初始化': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(710,23): warning C4244: '正在初始化': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(711,23): warning C4244: '正在初始化': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(721,57): warning C4244: '=': 將 'double' 轉換為 '_Tp'，由於類型不同，可能導致資料遺失
+          with
+          [
+              _Tp=float
+          ]
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(728,67): warning C4244: '=': 將 'double' 轉換為 '_Tp'，由於類型不同，可能導致資料遺失
+          with
+          [
+              _Tp=float
+          ]
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(442,12): warning C4101: 'v0': 未參考的區域變數
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(1153,28): warning C4244: '=': 將 'int64' 轉換為 'double'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(1377,28): warning C4244: '=': 將 'int64' 轉換為 'double'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(1531,40): warning C4244: '=': 將 'int64' 轉換為 'double'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(1589,51): warning C4244: '=': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(1607,55): warning C4244: '=': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(1676,60): warning C4244: '=': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(1698,53): warning C4244: '=': 將 'double' 轉換為 'uchar'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(2072,15): warning C4244: '引數': 將 'time_t' 轉換為 'unsigned int'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(2362,13): warning C4244: '正在初始化': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(2556,14): warning C4244: '=': 將 'float' 轉換為 'int'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(2562,14): warning C4244: '=': 將 'float' 轉換為 'int'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(2570,14): warning C4244: '=': 將 'float' 轉換為 'int'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(2576,14): warning C4244: '=': 將 'float' 轉換為 'int'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(2716,21): warning C4244: '正在初始化': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(2726,21): warning C4244: '正在初始化': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(2739,14): warning C4244: '=': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(2792,21): warning C4244: '正在初始化': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(2795,21): warning C4244: '正在初始化': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(2797,27): warning C4244: '正在初始化': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(2812,21): warning C4244: '正在初始化': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(2826,21): warning C4244: '正在初始化': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\m0987\Desktop\學習\C++\ORB\ORB\ORB.cpp(2844,14): warning C4244: '=': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
+  正在產生程式碼
+  1 of 280 functions ( 0.4%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    3 functions had inline decision re-evaluated but remain unchanged
+  已完成程式碼產生
+  ORB.vcxproj -> C:\Users\m0987\Desktop\學習\C++\ORB\x64\Release\ORB.exe

@@ -1,0 +1,64 @@
+Install python to play this game
+The game screen like this
+
+牆牆牆牆牆牆牆牆牆牆牆牆牆牆牆　三
+牆枕頭教櫃牆冰箱食廚房桌桌桌牆　二
+牆床床　櫃牆　　　　　　吃　牆　一
+牆床床雞櫃牆　　　　　　　　牆　
+牆床床　窩牆　　　　　　　　牆　一
+牆　　　　牆　　　　　　　　牆　二
+牆牆牆　　牆　　牆牆牆牆牆牆角　三
+牆櫃櫃　　　　　　　椅　　鏡牆　四
+牆櫃櫃　　　　　　　　　　鏡牆　五
+牆視　　　　　　　桌桌桌　椅牆　六
+牆電　　　　　　　桌桌桌　椅牆　七
+牆視　　　　　　　桌桌桌　椅牆　八
+牆　　　　　　　　　　　　椅牆　九
+牆　　　　　　　　椅椅椅椅花牆　
+牆牆　　牆牆牆牆牆牆牆牆牆牆牆　
+牆鞋　　牆倉倉倉倉牆水　馬桶牆　
+牆櫃　　牆庫庫庫庫牆　　　　牆　
+牆架　　　　　　　　　　　　牆　
+牆牆門牆牆牆牆牆牆牆牆牆牆牆牆　
+
+三二一　一二三四五六七八九　
+
+You are the word 雞 in this screen, 
+And you can enter w,a,s,d and add number to move
+Just like when enter w10, 
+雞 will to go up for 10 block in this screen
+
+word 教 can teach you anything on this game, enter w2 to see the teaching for yourself!
+
+安裝python來玩這個遊戲
+遊戲畫面長這樣
+
+牆牆牆牆牆牆牆牆牆牆牆牆牆牆牆　三
+牆枕頭教櫃牆冰箱食廚房桌桌桌牆　二
+牆床床　櫃牆　　　　　　吃　牆　一
+牆床床雞櫃牆　　　　　　　　牆　
+牆床床　窩牆　　　　　　　　牆　一
+牆　　　　牆　　　　　　　　牆　二
+牆牆牆　　牆　　牆牆牆牆牆牆角　三
+牆櫃櫃　　　　　　　椅　　鏡牆　四
+牆櫃櫃　　　　　　　　　　鏡牆　五
+牆視　　　　　　　桌桌桌　椅牆　六
+牆電　　　　　　　桌桌桌　椅牆　七
+牆視　　　　　　　桌桌桌　椅牆　八
+牆　　　　　　　　　　　　椅牆　九
+牆　　　　　　　　椅椅椅椅花牆　
+牆牆　　牆牆牆牆牆牆牆牆牆牆牆　
+牆鞋　　牆倉倉倉倉牆水　馬桶牆　
+牆櫃　　牆庫庫庫庫牆　　　　牆　
+牆架　　　　　　　　　　　　牆　
+牆牆門牆牆牆牆牆牆牆牆牆牆牆牆　
+
+三二一　一二三四五六七八九　
+
+你是地圖中的[雞]字
+wasd 分別對應 上下左右
+輸入 w10 為往上十格  輸入 d3 則往右三格
+好好利用字母後面的數字
+除非你時間很多 
+
+可以觸碰上頭的[教]字獲取更多訊息
