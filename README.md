@@ -38,7 +38,7 @@
      ![2DSplit](https://github.com/Wattgo-Real/Collections/blob/main/Data/2DSplit.png)
 
      而經過我這次的練習後，我逐漸意識到寫解釋的用意，因為我寫程式很少會去寫解釋，所以當我花了 3 天去看我以前寫的 MeshSplit 時，發現我完全看不懂我自己寫的，所以才打算重寫。
-### 2. 跟DeepLearning有關 有關 ###
+### 2. 跟DeepLearning有關 ###
    * #### 利用 Reinforcement 原理用 pytorch 打造一個自動尋找出路的Agent ####
      檔案在 AutomaticallySolveTheMaze 中。
 
