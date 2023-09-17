@@ -3,7 +3,7 @@
 ### 目錄 ###
 1. 跟 Unity 有關
    * 利用 Unity 框架的 ComputerShader 來做出有利用 GPU 實體渲染具有重力與碰撞的物體
-   * 利用 Unity 框架做出 Real-Time 的以一個二維平面將任何形狀的三維物體切成兩半
+   * 利用 Unity 框架做出 Real-Time 的以一個二維平面將任何形狀的三維物體切成兩半 (完全是自己想的方法)
 2. 跟 DeepLearning 有關
    * 利用 Reinforcement 原理用 pytorch 打造一個自動尋找出路的 Agent
    * 利用 ViT 原理用 pytorch 打造一個基於 Transformer 的 Text Recognition，可見TrOCR論文
@@ -20,14 +20,22 @@
 ### 1. 跟 Unity 有關 ###
    * #### 利用 Unity 框架的 ComputerShader 來做出有利用 GPU 實體渲染具有重力與碰撞的物體 ####
      檔案在 MyUnityAssets/Assets/Project/GPUPhysicalPartical 中。
+
+     當時我的巴哈介紹文章 : [https://forum.gamer.com.tw/C.php?bsn=60602&snA=3923](https://forum.gamer.com.tw/C.php?bsn=60602&snA=3923)
      
      2021 年的作品，因為我當時是因為我看了 Ming-Lun Chou(周明倫) 的 [GPU Particles with Primitive Collider Physics](https://www.youtube.com/watch?v=t2yPfenzkII&ab_channel=Ming-LunChou) 影片，我覺得很酷所以也想自己來做一個，了解到這是利用 ComputerShader 做出的後，我就開始著手製作這個做品，雖然我是想要達到粒子與粒子之間也能夠進行碰撞效果，但是因為這具有很多的限制，所以到最後還是打算不繼續做下去，其實其中的一個原因也是因為我當時的程式設計能力還不太行。
 
      ![ComputerShader](https://github.com/Wattgo-Real/Collections/blob/main/Data/Unity%20ComputerShader.gif)
 
-     當時我的巴哈介紹文章 : [https://forum.gamer.com.tw/C.php?bsn=60602&snA=3923](https://forum.gamer.com.tw/C.php?bsn=60602&snA=3923)
-   * #### 利用 Unity 框架做出 Real-Time 的以一個二維平面將任何形狀的三維物體切成一半 ####
+   * #### 利用 Unity 框架做出 Real-Time 的以一個二維平面將任何形狀的三維物體切成一半 (完全是自己想的方法) ####
      檔案在 MyUnityAssets/Assets/Project/2Dsplit 中。
+
+     作法原理 :
+     1. 將二維平面轉為世界座標矩陣後，將二維平面法線方向的面都去除。
+     2.
+     3.
+     4.
+     5. 
      
      會做這個是因為我以前看了 mtbdesignworks 所做的 4D 遊戲之後，我覺得非常的酷，所以我當時是想要做一個 3D 截面透視的遊戲，就是 3D 的世界中只能看到 2D 的截面，但是經過了不斷的嘗試之後，都沒有一個好方式去實現 3D 透視的遊戲，所以我就想自己做了一個可以實時的將一個物體切成一半的程式，來形成 3D 截面透視的效果。
 
