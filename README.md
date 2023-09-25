@@ -9,7 +9,7 @@
    * 利用 ViT 原理用 pytorch 打造一個基於 Transformer 的 Text Recognition，可見TrOCR論文
    * 其他小實作 (U-Net 實作、GaN 笑臉與哭臉 等等)
 3. 與無人機相關的
-   * 無人機控制端，利用ESP32寫出一個四軸無人機的系統。
+   * 無人機控制端，利用 ESP32 寫出一個四軸無人機的系統。
    * 用C++做的OpenCV的SLAM部分系統 (找出相機相對角度與位置)
 4. 其他的小作品
    * Python版的檔案總管。
